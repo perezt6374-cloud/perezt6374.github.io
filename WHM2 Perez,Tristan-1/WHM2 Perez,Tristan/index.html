@@ -1,41 +1,89 @@
 <!DOCTYPE html>
-
-<head>
-
 <html lang="en">
-
-<meta charset="UTF-8">
-
-<title>Homepage of the flash</title>
-
-</head>
-
-<meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8" />
     <title>Flash Fan Feedback Form</title>
+    <style>
+        body {
+            background-color: black;
+            color: crimson;
+            font-family: Arial, sans-serif;
+        }
+        nav a {
+            color: crimson;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+        form {
+            background-color: #111;
+            padding: 20px;
+            width: 350px;
+            border: 2px solid crimson;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        select, textarea, input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            background-color: crimson;
+            border: 1px solid black;
+            border-radius: 4px;
+            color: black;
+            resize: vertical;
+        }
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+            padding: 0;
+        }
+        legend {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        input[type="radio"] {
+            margin-right: 6px;
+            accent-color: crimson;
+        }
+        button {
+            background-color: crimson;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        img {
+            width: 20%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
-
-<body style="background-color: black; color: crimson; font-family: Arial, sans-serif;">
+<body>
 
     <!-- Navigation Bar -->
     <nav style="margin-bottom: 20px;">
-        <a href="index.html" style="color: crimson; margin-right: 20px;">Homepage</a>
-        <a href="bartholamule_allen.html" style="color: crimson; margin-right: 20px;">Info Page</a>
-        <a href="the_flash.html" style="color: crimson; margin-right: 20px;">Powers Page</a>
-        
-        
+        <a href="index.html">Homepage</a>
+        <a href="bartholamule_allen.html">Info Page</a>
+        <a href="the_flash.html">Powers Page</a>
     </nav>
 
-    <!-- Page Title -->
+    <!-- Feedback Form Section -->
     <h1>Flash Fan Feedback</h1>
     <p>Let us know who your favorite Flash villains and powers are!</p>
 
-    <!-- Feedback Form -->
-    <form style="background-color: #111; padding: 20px; width: 350px; border: 2px solid crimson; border-radius: 8px;">
-
-        <!-- Dropdown for favorite Flash villain -->
-        <label for="favorite-villain" style="display: block; margin-bottom: 8px; font-weight: bold;">Favorite Flash Villain:</label>
-        <select id="favorite-villain" name="favorite-villain" required
-            style="width: 100%; padding: 8px; margin-bottom: 20px; background-color: crimson; border: 1px solid black; border-radius: 4px; color: black;">
+    <form>
+        <label for="favorite-villain">Favorite Flash Villain:</label>
+        <select id="favorite-villain" name="favorite-villain" required>
             <option value="" disabled selected>Select one</option>
             <option value="zoom">Professor Zoom (Reverse Flash)</option>
             <option value="cold">Captain Cold</option>
@@ -44,89 +92,37 @@
             <option value="trickster">The Trickster</option>
         </select>
 
-        <!-- Radio buttons -->
-        <fieldset style="border: none; margin-bottom: 20px; padding: 0;">
-            <legend style="font-weight: bold; margin-bottom: 8px;">Which Flash Power is the Coolest?</legend>
-
-            <label style="display: block; margin-bottom: 6px;">
-                <input type="radio" name="power" value="speed" required style="margin-right: 6px; accent-color: crimson;">
-                Super Speed
-            </label>
-            <label style="display: block; margin-bottom: 6px;">
-                <input type="radio" name="power" value="lightning" style="margin-right: 6px; accent-color: crimson;">
-                Speed Force Lightning
-            </label>
-            <label style="display: block; margin-bottom: 6px;">
-                <input type="radio" name="power" value="time" style="margin-right: 6px; accent-color: crimson;">
-                Time Travel
-            </label>
-            <label style="display: block; margin-bottom: 6px;">
-                <input type="radio" name="power" value="remnants" style="margin-right: 6px; accent-color: crimson;">
-                Time Remnants
-            </label>
-            <label style="display: block; margin-bottom: 6px;">
-                <input type="radio" name="power" value="detective" style="margin-right: 6px; accent-color: crimson;">
-                Speed Thinking / Detective Work
-            </label>
+        <fieldset>
+            <legend>Which Flash Power is the Coolest?</legend>
+            <label><input type="radio" name="power" value="speed" required>Super Speed</label>
+            <label><input type="radio" name="power" value="lightning">Speed Force Lightning</label>
+            <label><input type="radio" name="power" value="time">Time Travel</label>
+            <label><input type="radio" name="power" value="remnants">Time Remnants</label>
+            <label><input type="radio" name="power" value="detective">Speed Thinking / Detective Work</label>
         </fieldset>
 
-        <!-- Comment box -->
-        <label for="comment" style="display: block; margin-bottom: 8px; font-weight: bold;">Why do you like this power?</label>
-        <textarea id="comment" name="comment" rows="4" required
-            style="width: 100%; background-color: crimson; border: 1px solid black; border-radius: 4px; padding: 8px; margin-bottom: 20px; color: black; resize: vertical;"></textarea>
+        <label for="comment">Why do you like this power?</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea>
 
-        <!-- Date input -->
-        <label for="year" style="display: block; margin-bottom: 8px; font-weight: bold;">When did you become a Flash fan?</label>
-        <input type="date" id="year" name="year" required
-            style="width: 100%; padding: 8px; background-color: crimson; border: 1px solid black; border-radius: 4px; margin-bottom: 20px; color: black;">
+        <label for="year">When did you become a Flash fan?</label>
+        <input type="date" id="year" name="year" required>
 
-        <!-- Submit and Reset Buttons -->
-        <button type="submit" style="background-color: crimson; color: black; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; margin-right: 10px;">Submit</button>
-        <button type="reset" style="background-color: crimson; color: black; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">Reset</button>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
     </form>
 
-</html>
+    <!-- Additional content -->
+    <h1>Welcome to The Flash Fan Site</h1>
+    <p>The Scarlet Speedster has inspired generations of fans. This site explores his origin, powers, and greatest foes.</p>
 
+    <img src="the_flash.jpg" alt="The Flash running" />
 
-<body style="background-color:black ;color:crimson"></body>
-
-    <nav>
-        <a href="Index.html">Homepage</a>
-        
-        <a href="bartholamule_allen.html">info page</a>
-    
-        <a href="the_flash.html">powers Page</a>
-        
-        
-        
-        
-
-
-
-    </nav>
-
-    <a href="johnnymenos124@gmail.com">Send an Email</a>
-
-<!--Your HTML tags will start here-->
-
-
-
-<h1>Welcome to The Flash Fan Site</h1>
-  <p>The Scarlet Speedster has inspired generations of fans. This site explores his origin, powers, and greatest foes.</p>
-
-<img src="the_flash.jpg" width="20%" length="20%" alt="The Flash running"
-
-<h2>contact me</h2>
-<p>Questions or comments? email here:
-    <a href="mailto:johnnymenos124@gmail.com">johnnymenos124@gmail.com</a>
-</p>
-
-
-<!--Your HTML tags will end here-->
+    <h2>Contact Me</h2>
+    <p>Questions or comments? Email here:
+        <a href="mailto:johnnymenos124@gmail.com" style="color: crimson;">johnnymenos124@gmail.com</a>
+    </p>
 
 </body>
-
-
 </html>
 
 
